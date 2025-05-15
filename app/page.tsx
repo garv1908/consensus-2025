@@ -13,19 +13,8 @@ export default async function Home() {
       >
         trace
       </h1>
-      <p>xyz</p>
-      <a
-        className="hidden sm:block"
-        href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniklasp%2Fpolkadot-nextjs-starter"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://vercel.com/button"
-          alt="Deploy with Vercel"
-          width={103}
-          height={32}
-        />
-      </a>
+      <p>a better way to authenticate</p>
+
       <AccountBalance />
     </main>
   );
