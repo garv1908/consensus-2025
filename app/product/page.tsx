@@ -46,19 +46,22 @@ export default function ProductMintPage() {
           <CardContent className="flex flex-col gap-4">
             <Input
               placeholder="Product Name"
-              value={productName}
+              defaultValue="Hermes Birkin Handbag"
+              // value={productName}
               onChange={e => setProductName(e.target.value)}
               required
             />
             <Textarea
               placeholder="Description"
-              value={description}
+              defaultValue="A very valuable handbag"
+              // value={description}
               onChange={e => setDescription(e.target.value)}
               required
             />
             <Input
               placeholder="Serial Number"
-              value={serial}
+              defaultValue="00010"
+              // value={serial}
               onChange={e => setSerial(e.target.value)}
               required
             />

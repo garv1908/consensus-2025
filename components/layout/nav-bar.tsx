@@ -15,28 +15,28 @@ export interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: "Products",
-    href: "/products",
+    title: "Mint NFT",
+    href: "/product",
     items: [
-      { title: "Product 1", href: "#" },
-      { title: "Product 2", href: "#" },
-      { title: "Product 3", href: "#" },
+      // { title: "mintNFT", href: "#" },
+      // { title: "Product 2", href: "#" },
+      // { title: "Product 3", href: "#" },
     ],
   },
   {
-    title: "Solutions",
-    href: "/solutions",
+    title: "Scan hash",
+    href: "/scan",
     items: [
-      { title: "Solution 1", href: "#" },
-      { title: "Solution 2", href: "#" },
-      { title: "Solution 3", href: "#" },
+      // { title: "Solution 1", href: "#" },
+      // { title: "Solution 2", href: "#" },
+      // { title: "Solution 3", href: "#" },
     ],
   },
-  {
-    title: "Resources",
-    href: "/resources",
-    items: [],
-  },
+  // {
+  //   title: "Resources",
+  //   href: "/resources",
+  //   items: [],
+  // },
 ];
 
 export function NavBar() {
@@ -49,7 +49,7 @@ export function NavBar() {
           <Link href="/" className="flex items-end flex-col">
             <PolkadotLogo withPoweredBy={false} />
             <span className="text-[10px] sm:text-[13px] font-light mr-1 -mt-1.5">
-              App Starter
+              trace
             </span>
           </Link>
 
