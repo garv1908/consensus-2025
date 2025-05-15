@@ -11,9 +11,9 @@ export default async function Home() {
           fontUnbounded.className,
         )}
       >
-        Polkadot Next.js Starter
+        trace
       </h1>
-      <p>A starter project for building a Polkadot dApp with Next.js.</p>
+      <p>xyz</p>
       <a
         className="hidden sm:block"
         href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniklasp%2Fpolkadot-nextjs-starter"

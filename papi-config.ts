@@ -5,6 +5,7 @@ import {
   polkadot_asset_hub,
   paseo,
   paseo_asset_hub,
+  westend_asset_hub,
 } from "@polkadot-api/descriptors";
 import type { TypedApi } from "polkadot-api";
 import { logos } from "@/icons/logos";
@@ -37,6 +38,7 @@ export interface ChainConfig {
   descriptors:
     | typeof polkadot
     | typeof polkadot_asset_hub
+    | typeof westend_asset_hub
     | typeof paseo
     | typeof paseo_asset_hub;
   endpoints: string[];
@@ -87,6 +89,15 @@ export const chainConfig: ChainConfig[] = [
     name: "Paseo Asset Hub",
     descriptors: paseo_asset_hub,
     endpoints: ["wss://asset-hub-paseo-rpc.dwellir.com"],
+    icon: logos.paseoAssethub,
+    chainSpec: JSON.parse(paseoAssetHubChainSpec),
+    relayChainSpec: JSON.parse(paseoChainSpec),
+  },
+  {
+    key: "westend_asset_hub",
+    name: "Westend Asset Hub",
+    descriptors: westend_asset_hub,
+    endpoints: ["wss://asset-hub-westend-eth-rpc.polkadot.io"],
     icon: logos.paseoAssethub,
     chainSpec: JSON.parse(paseoAssetHubChainSpec),
     relayChainSpec: JSON.parse(paseoChainSpec),
