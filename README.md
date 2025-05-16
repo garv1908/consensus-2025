@@ -6,7 +6,7 @@ Offers a product authentication platform to help luxury brands fight counterfeit
 
 ## 🎥 Demo Video
 
-📺 [video in progress](https://youtu.be/Fn-9o3fRpb8)
+📺 [watch the youtube demo here](https://youtu.be/Fn-9o3fRpb8)
 
 ---
 
