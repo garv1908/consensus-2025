@@ -15,8 +15,7 @@ import {
 } from "@polkadot-labs/hdkd-helpers"
 import { getPolkadotSigner } from "polkadot-api/signer"
 import { createClient, Enum } from "polkadot-api"
-import { westend_asset_hub } from "@polkadot-api/descriptors";
-import { MultiAddress, wnd } from "@polkadot-api/descriptors"
+import { MultiAddress, westend_asset_hub } from "@polkadot-api/descriptors"
 import { chainSpec } from "polkadot-api/chains/westend2"
 import { getSmProvider } from "polkadot-api/sm-provider"
 // import { ApiPromise, WsProvider } from "@polkadot/api";
@@ -28,6 +27,8 @@ import {
 } from "polkadot-api/pjs-signer"
 import { getWsProvider } from "polkadot-api/ws-provider/web";
 import { withPolkadotSdkCompat } from "polkadot-api/polkadot-sdk-compat";
+
+// import { RuleType, createPolicy } from "@fortelabs/sdk";
 
 export default function ProductMintPage() {
   const [productName, setProductName] = useState("");
@@ -88,12 +89,24 @@ export default function ProductMintPage() {
         }
       )
 
-      tx.signAndSubmit(selectedAccount.polkadotSigner)
+      tx.sign(selectedAccount.polkadotSigner)
       .then((result) => {
-        console.log("result:", result)
-        // setMintedHash(result)
+        console.log("result:", result);
+        setMintedHash(result);
       })
 
+      const collectionIds = await api.query.Nfts.Collection.getEntries();
+      console.log("collectionIds:", collectionIds);
+      const items = await api.query.Nfts.Item.getEntries();
+      console.log("items:", items);
+
+      // api.query.Nfts.Item.getEntries().then((result) => {
+      //   console.log("result:", result);
+      // })
+      // api.query.Nfts.
+      // const collectionEntries = await api.query.Nfts.Collection.getEntries();
+      // const account = selectedAccount.address;
+      
       // // const api = await ApiPromise.create({ provider: new WsProvider("wss://asset-hub-westend-rpc.dwellir.com") });
       // console.log(selectedAccount)
       // // const nft = api.tx.nfts.create()
@@ -153,7 +166,7 @@ export default function ProductMintPage() {
                   NFT minted! {/* Token ID: <span className="font-mono">{mintedHash}</span> */}
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-mono bg-gray-100 px-2 py-1 rounded text-black select-all">{mintedHash}</span>
+                  <span className="font-mono bg-gray-100 px-2 py-1 rounded text-black select-all">{mintedHash.substring(0, 10) + "..."}</span>
                     <Button
                     type="button"
                     size="sm"
