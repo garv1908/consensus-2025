@@ -1,66 +1,42 @@
-## Foundry
+# 🧾 Trace — NFT-Based Product Authentication on Polkadot
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Offers a product authentication platform to help luxury brands fight counterfeits using NFTs uniquely linked to each physical item via Polkadot.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🎥 Demo Video
 
-## Documentation
+📺 [video in progress](https://example.com/demo-video)
 
-https://book.getfoundry.sh/
+---
 
-## Usage
+## 🖼️ Screenshots
 
-### Build
+- ![Screenshot - Mint NFT page](./screenshots/mintnft.png)
+- ![Screenshot - NFT Lookup Page](./screenshots/scan.png)
 
-```shell
-$ forge build
-```
+---
 
-### Test
+## 🔗 How It Works (Blockchain Interaction)
 
-```shell
-$ forge test
-```
+1. **NFT Minting**: Each product is minted as a unique NFT on the Polkadot Asset Hub using `Transactions.Nfts.create`.
+2. **Physical Link**: The NFT hash is laser-etched, QR-coded, or NFC-tagged onto the physical product.
+3. **Ownership Tracking**: Ownership is tied to wallet addresses; all transfers are on-chain.
+4. **Verification**: Anyone can scan the tag to validate authenticity and view ownership history.
+5. **Theft Deterrence**: Resold or stolen items can be flagged and traced due to transparent transfer logs.
 
-### Format
+> Smart contracts use the `westend_asset_hub` descriptor and Polkadot-js browser extension for signing.
 
-```shell
-$ forge fmt
-```
+---
 
-### Gas Snapshots
+## 🗂️ Repo Structure
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+trace/
+├── contracts/ # Smart contracts (if applicable)
+├── frontend/ # Next.js web app
+│ ├── components/ # UI components (Card, Button, WalletSelect)
+│ ├── pages/ # Mint + Verify product pages
+│ └── providers/ # Polkadot extension integration
+├── public/screenshots/ # App UI screenshots
+├── README.md
+└── ...
