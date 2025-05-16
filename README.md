@@ -1,58 +1,66 @@
-# Polkadot Next.js Starter
+## Foundry
 
-This project is a starter template for building frontend applications on the
-Polkadot network using [papi](https://papi.how) for interacting with polkadot
-chains and Next.js. as a react framework. It includes essential tools and
-configurations to streamline development.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-![Polkadot Next.js Starter](public/polkadot-nextjs-starter.png)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fniklasp%2Fpolkadot-nextjs-starter&project-name=polkadot-nextjs-starter&repository-name=polkadot-nextjs-starter&demo-title=Polkadot%20Next.js%20Starter%20&demo-description=A%20template%20to%20get%20started%20building%20apps%20powered%20by%20Polkadot&demo-url=https%3A%2F%2Fpolkadot-nextjs-starter.vercel.app&demo-image=https%3A%2F%2Fpolkadot-nextjs-starter.vercel.app%2Fpolkadot-nextjs-starter.png)
+Foundry consists of:
 
-## Features
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-- Integration with **[Polkadot API](https://papi.how)** for blockchain interactions. Using lightclients per default. Storage subscriptions, storage queries and transactions. Proper loading states for individual components that require a chain connection for best UX.
-- Server rendered pages with client components where needed with**[Next.js 15.x](https://nextjs.org/docs/app/getting-started)**
-- Modern, full-control react components with [shadcn ui](https://ui.shadcn.com/)
-- Utility-first CSS with [Tailwind CSS 4.0](https://tailwindcss.com/)
-  Data-fetching library for managing server state.
-- Light and dark modes / theme management with [Next Themes](https://ui.shadcn.com/docs/dark-mode/next)
+## Documentation
 
-## Project Structure
+https://book.getfoundry.sh/
 
-- `app/`: Main application files including layout and page components.
-- `components/`: Contains UI components like `PolkadotLogo`, `Footer`, and
-  `Nav`.
-- `providers/`: Context providers for themes, Polkadot extensions, and
-  blockchain connections.
-- `hooks/`: Example hooks with subscriptions.
-- `lib/`: utility functions
+## Usage
 
-## Installation
+### Build
 
-1. Clone the repository:
+```shell
+$ forge build
+```
 
-   ```bash
-   git clone https://github.com/niklasp/polkadot-nextjs-starter.git
-   ```
+### Test
 
-2. Install dependencies:
+```shell
+$ forge test
+```
 
-   ```bash
-   cd polkadot-nextjs-starter
-   pnpm install
-   ```
+### Format
 
-3. Run the development server:
+```shell
+$ forge fmt
+```
 
-   ```bash
-   pnpm dev
-   ```
+### Gas Snapshots
 
-## Contributing
+```shell
+$ forge snapshot
+```
 
-Contributions are welcome! Please open an issue or submit a pull request for any
-improvements or bug fixes.
+### Anvil
 
-## License
+```shell
+$ anvil
+```
 
-This project is open-source and available under the MIT License.
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
