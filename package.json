@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@polkadot-api/descriptors": "file:.papi/descriptors",
+    "@polkadot-labs/hdkd": "^0.0.15",
+    "@polkadot-labs/hdkd-helpers": "^0.0.15",
+    "@polkadot/extension-dapp": "^0.58.10",
     "@polkadot/react-identicon": "^3.13.1",
     "@radix-ui/react-dialog": "^1.1.13",
     "@radix-ui/react-dropdown-menu": "^2.1.14",

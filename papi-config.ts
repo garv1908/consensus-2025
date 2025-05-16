@@ -13,6 +13,7 @@ import { chainSpec as polkadotChainSpec } from "polkadot-api/chains/polkadot";
 import { chainSpec as polkadotAssetHubChainSpec } from "polkadot-api/chains/polkadot_asset_hub";
 import { chainSpec as paseoChainSpec } from "polkadot-api/chains/paseo";
 import { chainSpec as paseoAssetHubChainSpec } from "polkadot-api/chains/paseo_asset_hub";
+import { chainSpec as westendAssetHubChainSpec} from "polkadot-api/chains/westend2"
 
 export interface ChainSpec {
   name: string;
@@ -101,7 +102,7 @@ export const chainConfig: ChainConfig[] = [
     endpoints: ["wss://asset-hub-westend-rpc.dwellir.com"],
     // endpoints: ["wss://westend-rpc.polkadot.io"],
     icon: logos.paseoAssethub,
-    chainSpec: JSON.parse(paseoAssetHubChainSpec),
+    chainSpec: JSON.parse(westendAssetHubChainSpec),
     relayChainSpec: JSON.parse(paseoChainSpec),
   },
 ];
