@@ -6,12 +6,13 @@ Offers a product authentication platform to help luxury brands fight counterfeit
 
 ## 🎥 Demo Video
 
-📺 [video in progress](https://example.com/demo-video)
+📺 [video in progress](https://youtu.be/Fn-9o3fRpb8)
 
 ---
 
 ## 🖼️ Screenshots
 
+- ![Screenshot - homepage](./screenshots/home.png)
 - ![Screenshot - Mint NFT page](./screenshots/mintnft.png)
 - ![Screenshot - NFT Lookup Page](./screenshots/scan.png)
 
@@ -31,12 +32,12 @@ Offers a product authentication platform to help luxury brands fight counterfeit
 
 ## 🗂️ Repo Structure
 
-trace/
-├── contracts/ # Smart contracts (if applicable)
-├── frontend/ # Next.js web app
-│ ├── components/ # UI components (Card, Button, WalletSelect)
-│ ├── pages/ # Mint + Verify product pages
-│ └── providers/ # Polkadot extension integration
-├── public/screenshots/ # App UI screenshots
-├── README.md
+trace/ \
+├── contracts/ # Smart contracts (if applicable) \
+├── frontend/ # Next.js web app \
+│ ├── components/ # UI components (Card, Button, WalletSelect) \
+│ ├── pages/ # Mint + Verify product pages \
+│ └── providers/ # Polkadot extension integration \
+├── public/screenshots/ # App UI screenshots \
+├── README.md \
 └── ...
